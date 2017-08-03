@@ -1,35 +1,15 @@
-  function videobackground() {
-       var video = document.getElementById("videobackground");
-       var button = document.getElementById("play");
-       if (video.paused) {
-          video.play();
-          button.textContent = "||";
-       } else {
-          video.pause();
-          button.textContent = ">";
-       }
-    }
-
-    function restart() {
-        var video = document.getElementById("videobackground");
-        video.currentTime = 0;
-    }
-
-    function skip(value) {
-        var video = document.getElementById("videobackground");
-        video.currentTime += value;
-    }
-
-    function toggleHamburger(x) {
-        x.classList.toggle("change");
-        openNav()
-    }
 
 function openNav() {
-    document.getElementById("nav").style.width = "100%";
+
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
-/* Close when someone clicks on the "x" symbol inside the overlay */
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
 function closeNav() {
-    document.getElementById("nav").style.width = "0%";
+  
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    document.body.style.backgroundColor = "white";
 }
